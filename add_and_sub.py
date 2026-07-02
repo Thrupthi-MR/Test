@@ -3,4 +3,4 @@ def add(a,b):
 add(25,25) 
 def sub(c,d):
     print(c-d) 
-sub(200,34)
+sub(20,20)
