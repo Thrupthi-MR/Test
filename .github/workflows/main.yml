@@ -17,4 +17,4 @@ jobs:
           python-version: '3.11'
 
       - name: Run Python Script
-        run: add_and_sub.py
+        run: python add_and_sub.py
