@@ -4,4 +4,4 @@ def factorial(n):
         fact *= i
     return fact
 
-print(factorial(5))
+print(factorial(6))
