@@ -5,4 +5,4 @@ def factorial(n):
         fact *= i
     return fact
 
-print(factorial(97))
+print(factorial(23))
