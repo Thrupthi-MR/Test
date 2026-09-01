@@ -154,7 +154,9 @@ def generate_report(uploaded_file):
     )
 
     output_path = (
-        rf"C:\Users\40054006\OneDrive - LTTS\IrregularFailureReports\Irregular_Test_Failures_{timestamp}.xlsx"
+        r"C:\Users\40054006\OneDrive - LTTS"
+        r"\IrregularFailureReports"
+        rf"\Irregular_Test_Failures_{timestamp}.xlsx"
     )
 
     wb.save(output_path)
@@ -170,3 +172,4 @@ def generate_report(uploaded_file):
         output_path,
         len(irregular_df)
     )
+    
