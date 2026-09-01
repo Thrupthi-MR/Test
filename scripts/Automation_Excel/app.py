@@ -128,7 +128,10 @@ def main():
         label="📥 Download Report",
         data=report_file,
         file_name="Irregular_Test_Failures.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        mime=(
+            "application/vnd.openxmlformats-officedocument."
+            "spreadsheetml.sheet"
+        )
     )
 
 
