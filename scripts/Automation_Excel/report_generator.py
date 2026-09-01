@@ -172,4 +172,4 @@ def generate_report(uploaded_file):
         output_path,
         len(irregular_df)
     )
-    
+
