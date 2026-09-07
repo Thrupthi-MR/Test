@@ -1,0 +1,51 @@
+PR REPORT
+========================================
+
+PR Number : 49
+Title     : Powerautomate test2
+Author    : Thrupthi-MR
+State     : open
+
+FILES CHANGED
+========================================
+
+File Name : .github/workflows/static-code-check.yml
+Status    : modified
+Additions : 2
+Deletions : 1
+----------------------------------------
+File Name : scripts/Automation_Excel/app.py
+Status    : added
+Additions : 139
+Deletions : 0
+----------------------------------------
+File Name : scripts/Automation_Excel/report_generator.py
+Status    : added
+Additions : 174
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/app_auto.py
+Status    : added
+Additions : 38
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/auto_test_generator.py
+Status    : added
+Additions : 98
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/bluetooth_rules.py
+Status    : added
+Additions : 23
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/verifier.py
+Status    : added
+Additions : 22
+Deletions : 0
+----------------------------------------
+File Name : scripts/add_and_sub.py
+Status    : modified
+Additions : 1
+Deletions : 1
+----------------------------------------
