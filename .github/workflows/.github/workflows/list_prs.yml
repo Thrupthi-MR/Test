@@ -25,3 +25,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install requests
+
+      - name: Print PR Description
+        run: |
+          echo "${{ github.event.pull_request.body }}"
