@@ -197,4 +197,25 @@ class PRManager:
         "count": count,
             "repo_url": repo_url
         }
-    
+
+    def parse_repo_url(
+        self,
+        repo_url
+    ):
+        """
+        Parse repository URL and extract
+        owner and repository name.
+
+        Args:
+            repo_url (str): GitHub repository URL.
+
+        Returns:
+            dict: Repository owner and name.
+        """
+
+        parts = repo_url.rstrip("/").split("/")
+
+        return {
+            "owner": parts[-2],
+            "repo": parts[-1]
+        }

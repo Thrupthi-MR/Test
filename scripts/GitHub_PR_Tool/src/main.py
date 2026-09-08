@@ -34,6 +34,12 @@ def main():
 
     print("\nParsed Data:")
     print(parsed_data)
+    repo_data = pr_manager.parse_repo_url(
+        parsed_data["repo_url"]
+    )
+
+    print("\nRepository Data:")
+    print(repo_data)
 
     writer = FileWriter()
 
