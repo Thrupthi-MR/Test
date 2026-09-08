@@ -106,11 +106,27 @@ def main():
     )
     print("\nLast Pull Requests:")
 
+    print("\nUsing Values:")
+
+    print(
+        repo_data["owner"]
+    )
+
+    print(
+        repo_data["repo"]
+    )
+
+    print(
+        parsed_data["count"]
+    )
+
+    print("\nLast Pull Requests:")
+
     pull_requests = pr_manager.get_pull_requests(
-        "Thrupthi-MR",
-        "Test",
+        repo_data["owner"],
+        repo_data["repo"],
         state="closed",
-        count=10
+        count=parsed_data["count"]
     )
 
 
