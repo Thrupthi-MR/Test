@@ -1,3 +1,4 @@
+import os
 import json
 
 
@@ -22,6 +23,10 @@ class FileWriter:
             files (list): List of changed files.
             output_file (str): Output report file path.
         """
+        os.makedirs(
+        os.path.dirname(output_file),
+        exist_ok=True
+        )
 
         with open(
             output_file,
@@ -95,6 +100,10 @@ class FileWriter:
             pull_requests (list): Pull request data.
             output_file (str): Output JSON file path.
         """
+        os.makedirs(
+        os.path.dirname(output_file),
+        exist_ok=True
+        )
 
         with open(
             output_file,

@@ -63,16 +63,34 @@ def main():
     print("\nUpdated Description:")
     print(result["body"])
 
+    base_dir = os.path.dirname(
+        os.path.dirname(
+            os.path.abspath(__file__)
+        )
+    )
+
+    report_file = os.path.join(
+        base_dir,
+        "output",
+        "pr_report.txt"
+    )
+
+    json_file = os.path.join(
+        base_dir,
+        "output",
+        "pr_list.json"
+    )
+
 
     writer.write_report(
         pr_details,
         files,
-        "../output/pr_report.txt"
+        report_file
     )
 
     print(
-        "\nReport generated successfully: "
-        "../output/pr_report.txt"
+        f"\nReport generated successfully: "
+        f"{report_file}"
     )
     print("\nLast Pull Requests:")
 
@@ -89,12 +107,12 @@ def main():
 
     writer.write_pr_list_json(
         pull_requests,
-        "../output/pr_list.json"
+        json_file
     )
 
     print(
-        "\nPR JSON report generated: "
-        "../output/pr_list.json"
+        f"\nPR JSON report generated: "
+        f"{json_file}"
     )
 
 if __name__ == "__main__":
