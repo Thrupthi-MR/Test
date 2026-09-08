@@ -29,7 +29,6 @@ def main():
     print("\nPR Number:")
     print(pr_number)
     
-    print(token is not None)
 
     client = GitHubClient(token)
 
