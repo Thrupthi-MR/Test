@@ -34,9 +34,16 @@ def main():
 
     print("\nParsed Data:")
     print(parsed_data)
-    repo_data = pr_manager.parse_repo_url(
+
+    if parsed_data["repo_url"] is None:
+        repo_data = {
+            "owner": "Thrupthi-MR",
+            "repo": "Test"
+        }
+    else:
+        repo_data = pr_manager.parse_repo_url(
         parsed_data["repo_url"]
-    )
+        )
 
     print("\nRepository Data:")
     print(repo_data)
