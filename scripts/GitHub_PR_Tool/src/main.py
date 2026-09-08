@@ -14,7 +14,7 @@ def main():
     update the PR description, and generate a report.
     """
 
-    import os
+    
     description = os.getenv("PR_BODY")
 
     print("\nPR Description:")
@@ -42,9 +42,14 @@ def main():
     print(parsed_data)
 
     if parsed_data["repo_url"] is None:
+        repository = os.getenv(
+            "REPOSITORY"
+        )
+        owner, repo = repository.split("/")
+
         repo_data = {
-            "owner": "Thrupthi-MR",
-            "repo": "Test"
+            "owner": owner,
+            "repo": repo
         }
     else:
         repo_data = pr_manager.parse_repo_url(
@@ -57,9 +62,9 @@ def main():
     writer = FileWriter()
 
     pr_details = pr_manager.get_pr_details(
-        "Thrupthi-MR",
-        "Test",
-        49
+        repo_data["owner"],
+        repo_data["repo"],
+        pr_number
     )
 
     print("PR Details:")
@@ -68,9 +73,9 @@ def main():
     print("\nChanged Files:")
 
     files = pr_manager.get_pr_files(
-        "Thrupthi-MR",
-        "Test",
-        49
+        repo_data["owner"],
+        repo_data["repo"],
+        pr_number
     )
 
     for file in files:
