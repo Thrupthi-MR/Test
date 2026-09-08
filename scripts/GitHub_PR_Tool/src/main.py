@@ -28,6 +28,12 @@ def main():
     client = GitHubClient(token)
 
     pr_manager = PRManager(client)
+    parsed_data = pr_manager.parse_pr_description(
+        description
+    )
+
+    print("\nParsed Data:")
+    print(parsed_data)
 
     writer = FileWriter()
 
@@ -51,17 +57,17 @@ def main():
     for file in files:
         print(file)
 
-    print("\nUpdating PR Description...")
+    # print("\nUpdating PR Description...")
 
-    result = pr_manager.update_pr_description(
-        "Thrupthi-MR",
-        "Test",
-        49,
-        "PR updated using GitHub API and Python OOP project."
-    )
+    # result = pr_manager.update_pr_description(
+    #     "Thrupthi-MR",
+    #     "Test",
+    #     49,
+    #     "PR updated using GitHub API and Python OOP project."
+    # )
 
-    print("\nUpdated Description:")
-    print(result["body"])
+    # print("\nUpdated Description:")
+    # print(result["body"])
 
     base_dir = os.path.dirname(
         os.path.dirname(

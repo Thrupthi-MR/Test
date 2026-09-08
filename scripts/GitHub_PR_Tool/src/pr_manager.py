@@ -1,3 +1,6 @@
+from itertools import count
+
+
 class PRManager:
     """Handles pull request operations and business logic."""
 
@@ -154,3 +157,44 @@ class PRManager:
             pr_number,
             description
         )
+    def parse_pr_description(
+        self,
+        description
+    ):
+        """
+        Parse pull request description and extract
+        number_of_prs and repo_url values.
+
+        Args:
+            description (str): Pull request description.
+
+        Returns:
+            dict: Parsed pull request configuration
+                containing count and repository URL.
+        """
+
+        count = 10
+        repo_url = None
+
+        for line in description.splitlines():
+
+            line = line.strip()
+
+            if line.startswith("number_of_prs="):
+
+                count = int(
+                    line.split("=", 1)[1]
+                )
+
+            elif line.startswith("repo_url="):
+
+                repo_url = line.split(
+                    "=",
+                    1
+                )[1]
+
+        return {
+        "count": count,
+            "repo_url": repo_url
+        }
+    
