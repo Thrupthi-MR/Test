@@ -22,6 +22,12 @@ def main():
 
 
     token = os.getenv("PAT_TOKEN")
+    pr_number = int(
+        os.getenv("PR_NUMBER")
+    )
+
+    print("\nPR Number:")
+    print(pr_number)
     
     print(token is not None)
 
