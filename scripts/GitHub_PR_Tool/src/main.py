@@ -122,7 +122,6 @@ def main():
         f"\nReport generated successfully: "
         f"{report_file}"
     )
-    print("\nLast Pull Requests:")
 
     print("\nUsing Values:")
 
