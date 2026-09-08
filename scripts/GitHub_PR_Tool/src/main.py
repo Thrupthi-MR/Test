@@ -15,8 +15,15 @@ def main():
     """
 
     import os
+    description = os.getenv("PR_BODY")
 
-    token = os.getenv("GITHUB_TOKEN")
+    print("\nPR Description:")
+    print(description)
+
+
+    token = os.getenv("PAT_TOKEN")
+    
+    print(token is not None)
 
     client = GitHubClient(token)
 
