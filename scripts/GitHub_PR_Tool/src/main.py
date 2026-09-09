@@ -141,7 +141,7 @@ def main():
     pull_requests = pr_manager.get_pull_requests(
         repo_data["owner"],
         repo_data["repo"],
-        state="closed",
+        state="open",
         count=parsed_data["count"]
     )
 
