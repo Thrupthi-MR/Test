@@ -57,25 +57,25 @@ def main():
 
     writer = FileWriter()
 
-    pr_details = pr_manager.get_pr_details(
-        repo_data["owner"],
-        repo_data["repo"],
-        pr_number
-    )
+    # pr_details = pr_manager.get_pr_details(
+    #     repo_data["owner"],
+    #     repo_data["repo"],
+    #     pr_number
+    # )
 
-    print("PR Details:")
-    print(pr_details)
+    # print("PR Details:")
+    # print(pr_details)
 
-    print("\nChanged Files:")
+    # print("\nChanged Files:")
 
-    files = pr_manager.get_pr_files(
-        repo_data["owner"],
-        repo_data["repo"],
-        pr_number
-    )
+    # files = pr_manager.get_pr_files(
+    #     repo_data["owner"],
+    #     repo_data["repo"],
+    #     pr_number
+    # )
 
-    for file in files:
-        print(file)
+    # for file in files:
+    #     print(file)
 
     # print("\nUpdating PR Description...")
 
@@ -95,11 +95,11 @@ def main():
         )
     )
 
-    report_file = os.path.join(
-        base_dir,
-        "output",
-        "pr_report.txt"
-    )
+    # report_file = os.path.join(
+    #     base_dir,
+    #     "output",
+    #     "pr_report.txt"
+    # )
 
     json_file = os.path.join(
         base_dir,
@@ -108,16 +108,16 @@ def main():
     )
 
 
-    writer.write_report(
-        pr_details,
-        files,
-        report_file
-    )
+    # writer.write_report(
+    #     pr_details,
+    #     files,
+    #     report_file
+    # )
 
-    print(
-        f"\nReport generated successfully: "
-        f"{report_file}"
-    )
+    # print(
+    #     f"\nReport generated successfully: "
+    #     f"{report_file}"
+    # )
 
     print("\nUsing Values:")
 
