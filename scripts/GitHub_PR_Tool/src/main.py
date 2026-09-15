@@ -2,8 +2,7 @@
 
 import os
 
-from github_client import GitHubClient
-from pr_manager import PRManager
+from github_pr_manager import GitHubPRManager
 from file_writer import FileWriter
 
 
@@ -30,9 +29,7 @@ def main():
     print(pr_number)
     
 
-    client = GitHubClient(token)
-
-    pr_manager = PRManager(client)
+    pr_manager = GitHubPRManager(token)
     parsed_data = pr_manager.parse_pr_description(
         description
     )
