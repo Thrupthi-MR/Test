@@ -12,19 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
-
         with:
           python-version: "3.12"
 
       - name: Install Dependencies
         run: |
-          pip install requests
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Print PR Description
         run: |
@@ -36,6 +35,15 @@ jobs:
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPOSITORY: ${{ github.repository }}
-
         run: |
           python scripts/GitHub_PR_Tool/src/main.py
+
+      - name: Display JSON Report
+        run: |
+          cat scripts/GitHub_PR_Tool/output/pr_list.json
+
+      - name: Upload JSON Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-list-report
+          path: scripts/GitHub_PR_Tool/output/pr_list.json
