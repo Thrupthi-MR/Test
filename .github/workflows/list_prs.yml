@@ -35,6 +35,7 @@ jobs:
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPOSITORY: ${{ github.repository }}
+          DEBUG: "false"
         run: |
           python scripts/GitHub_PR_Tool/src/main.py
 
