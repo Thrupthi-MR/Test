@@ -1,6 +1,7 @@
 """Main entry point for GitHub Pull Request Tool."""
 
 import os
+DEBUG = os.getenv("DEBUG", "true").lower() == "true"
 
 from github_pr_manager import GitHubPRManager
 from file_writer import FileWriter
@@ -16,8 +17,9 @@ def main():
     
     description = os.getenv("PR_BODY")
 
-    print("\nPR Description:")
-    print(description)
+    if DEBUG:
+        print("\nPR Description:")
+        print(description)
 
 
     token = os.getenv("PAT_TOKEN")
@@ -25,8 +27,9 @@ def main():
         os.getenv("PR_NUMBER")
     )
 
-    print("\nPR Number:")
-    print(pr_number)
+    if DEBUG:
+        print("\nPR Number:")
+        print(pr_number)
     
 
     pr_manager = GitHubPRManager(token)
@@ -34,8 +37,9 @@ def main():
         description
     )
 
-    print("\nParsed Data:")
-    print(parsed_data)
+    if DEBUG:
+        print("\nParsed Data:")
+        print(parsed_data)
 
     if parsed_data["repo_url"] is None:
         repository = os.getenv(
@@ -52,8 +56,9 @@ def main():
         parsed_data["repo_url"]
         )
 
-    print("\nRepository Data:")
-    print(repo_data)
+    if DEBUG:
+        print("\nRepository Data:")
+        print(repo_data)
 
     writer = FileWriter()
 
@@ -119,20 +124,21 @@ def main():
     #     f"{report_file}"
     # )
 
-    print("\nUsing Values:")
+    if DEBUG:
+        print("\nUsing Values:")
+        print(
+            repo_data["owner"]
+        )
+        print(
+            repo_data["repo"]
+        )
+        print(
+            parsed_data["count"]
+        )
 
-    print(
-        repo_data["owner"]
-    )
-
-    print(
-        repo_data["repo"]
-    )
-
-    print(
-        parsed_data["count"]
-    )
-
+    
+    
+    
     print("\nLast Pull Requests:")
 
     pull_requests = pr_manager.get_pull_requests(
