@@ -37,7 +37,7 @@ jobs:
           REPOSITORY: ${{ github.repository }}
           DEBUG: "false"
         run: |
-          python scripts/GitHub_PR_Tool/src/main.py
+          python scripts/GitHub_PR_Tool/src/pr_tool.py
 
       # - name: Display JSON Report
       #   run: |
