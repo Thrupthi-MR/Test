@@ -1,0 +1,5 @@
+requests
+PyGithub
+pandas
+openpyxl
+flake8

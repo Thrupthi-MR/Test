@@ -1,0 +1,96 @@
+PR REPORT
+========================================
+
+PR Number : 49
+Title     : Powerautomate test2
+Author    : Thrupthi-MR
+State     : open
+
+FILES CHANGED
+========================================
+
+File Name : .github/workflows/.github/workflows/list_prs.yml
+Status    : added
+Additions : 38
+Deletions : 0
+----------------------------------------
+File Name : scripts/Automation_Excel/app.py
+Status    : added
+Additions : 139
+Deletions : 0
+----------------------------------------
+File Name : scripts/Automation_Excel/report_generator.py
+Status    : added
+Additions : 174
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/output/pr_list.json
+Status    : added
+Additions : 52
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/output/pr_report.txt
+Status    : added
+Additions : 51
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/__pycache__/file_writer.cpython-312.pyc
+Status    : added
+Additions : 0
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/__pycache__/github_client.cpython-312.pyc
+Status    : added
+Additions : 0
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/__pycache__/pr_manager.cpython-312.pyc
+Status    : added
+Additions : 0
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/file_writer.py
+Status    : added
+Additions : 109
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/github_client.py
+Status    : added
+Additions : 163
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/main.py
+Status    : added
+Additions : 95
+Deletions : 0
+----------------------------------------
+File Name : scripts/GitHub_PR_Tool/src/pr_manager.py
+Status    : added
+Additions : 156
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/app_auto.py
+Status    : added
+Additions : 38
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/auto_test_generator.py
+Status    : added
+Additions : 98
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/bluetooth_rules.py
+Status    : added
+Additions : 23
+Deletions : 0
+----------------------------------------
+File Name : scripts/Test_case_generator/verifier.py
+Status    : added
+Additions : 22
+Deletions : 0
+----------------------------------------
+File Name : scripts/add_and_sub.py
+Status    : modified
+Additions : 1
+Deletions : 1
+----------------------------------------
